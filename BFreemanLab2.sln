@@ -1,25 +1,114 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.7.34031.279
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFreemanLab2", "BFreemanLab2\BFreemanLab2.csproj", "{B4D10570-FF1E-43F4-8EFC-2A880865E2A8}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B4D10570-FF1E-43F4-8EFC-2A880865E2A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4D10570-FF1E-43F4-8EFC-2A880865E2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4D10570-FF1E-43F4-8EFC-2A880865E2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4D10570-FF1E-43F4-8EFC-2A880865E2A8}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {86325391-239B-4D69-8FE3-2D780B7B0FC1}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+//Bengi Freeman
+//Sept 28, 2023
+//Lab 2
+
+namespace BFreemanLab2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_click(Object sender, EventArgs e)
+        {
+            //Will close the form
+            this.Close();
+        }
+        private void Math_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Declaring variables
+            int number , number1 , sum, product
+
+            //conversion
+            number = Convert.ToInt32(txtBox1.Text);
+            number = Convert.ToInt32(txtBox2.Text);
+
+
+            //Calculation
+            sum = number + number1;
+            product = number * number1;
+
+           
+            //display answers
+            lblsume.Text = product.ToString();
+            lblProducte.Text = product.ToString();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPicture_Click(object sender, EventArgs e)
+        {
+            //When picture button is clicked the picture will appear visible
+            pictureBox1.Visible = true;
+        }
+
+        private void btnInformation_Click(object sender, EventArgs e)
+        {
+            groupBox2.Visible = true;
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            //Reset text box
+            txtBox1.Text = string.Empty;
+            txtBox2.Text = string.Empty;
+
+            //reset sum and product label
+            lblsume.Text = string.Empty;
+            lblProducte.Text = string.Empty;
+        }
+    }
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+           //will hide picture box when hid button is clicked
+            pictureBox1.Visible = false;
+
+            //Will hide text box
+            txtBox5.Visible = false;
+        }
+
+        private void Sum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Product_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
